@@ -43,6 +43,7 @@
     <Compile Include="Services\AccountFactory.cs" />
     <Compile Include="Services\BankSystemService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\GenerateID.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL.Interface\BLL.Interface.csproj">

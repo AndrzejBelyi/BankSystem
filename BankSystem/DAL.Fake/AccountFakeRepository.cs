@@ -9,11 +9,11 @@ using DAL.Interface.Interfaces;
 
 namespace DAL.Fake
 {
-    public class AccountRepository : DAL.Interface.Interfaces.IRepository<Account>
+    public class AccountFakeRepository : DAL.Interface.Interfaces.IRepository<Account>
     {
         List<Account> accountList= new List<Account>();
 
-        public AccountRepository()
+        public AccountFakeRepository()
         {
         }
 

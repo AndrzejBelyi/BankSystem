@@ -10,21 +10,18 @@ using DAL.Interface.Interfaces;
 
 namespace BLL.Services
 {
-    class BankSystemService: IBankSystemService
+    public class BankSystemService: IBankSystemService
     {
         private IRepository<Account> repository;
-
-        private IAccountFactory accountFactory;
         
-        public BankSystemService(IRepository<Account> repository, IAccountFactory accountFactory)
+        public BankSystemService(IRepository<Account> repository)
         {
             this.repository = repository;
-            this.accountFactory = accountFactory;
         }
 
         public void CreateAccount(AccountType type, Person person, IGenerateId generator)
         {           
-            repository.Add(accountFactory.Create(type, person, generator));
+            repository.Add(AccountFactory.Create(type, person, generator));
         }
 
         public void Add(Account account, decimal sum)
@@ -40,6 +37,11 @@ namespace BLL.Services
         public void Withdraw(Account account, decimal sum)
         {
             account.Withdraw(sum);
+        }
+
+        public IEnumerable<Account> GetAll()
+        {
+           return repository.GetAll();
         }
     }
 }

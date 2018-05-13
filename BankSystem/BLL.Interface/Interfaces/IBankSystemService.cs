@@ -38,5 +38,10 @@ namespace BLL.Interface.Interfaces
         /// <param name="sum">The sum.</param>
         void Withdraw(Account account, decimal sum);
 
+        /// <summary>
+        /// Gets all.
+        /// </summary>
+        /// <returns></returns>
+        IEnumerable<Account> GetAll();
     }
 }

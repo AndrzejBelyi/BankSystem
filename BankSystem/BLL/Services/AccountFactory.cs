@@ -1,17 +1,12 @@
 ﻿using BLL.Interface.Entities;
 using BLL.Interface.Entities.Accounts;
 using BLL.Interface.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BLL.Services
 {
-    public class AccountFactory : IAccountFactory
+    public static class AccountFactory
     {
-        public Account Create(AccountType type, Person owner,IGenerateId generator)
+        public static Account Create(AccountType type, Person owner,IGenerateId generator)
         {
             Account newAccount = null;
 
