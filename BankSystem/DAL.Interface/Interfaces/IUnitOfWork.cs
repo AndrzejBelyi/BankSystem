@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace DAL.Interface.Interfaces
 {
-    public interface IRepository<T>
+    public interface IUnitOfWork : IDisposable
     {
-        void Add(T entity);
-        void Remove(T entity);
-        void Update(T entity);
-        IEnumerable<T> GetAll();
+        void Save();
     }
 }

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{936C83DD-22D7-4E06-AD75-F4C19DCD95A4}</ProjectGuid>
+    <ProjectGuid>{69B901EB-C46F-406E-AF46-9B4B4AF7CCDF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BLL</RootNamespace>
@@ -40,18 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Services\AccountFactory.cs" />
-    <Compile Include="Services\BankSystemService.cs" />
+    <Compile Include="AccountFactory.cs" />
+    <Compile Include="BankSystemService.cs" />
+    <Compile Include="GeneratorID.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\GenerateID.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL.Interface\BLL.Interface.csproj">
-      <Project>{f4d7f33f-cced-49a5-8f19-001dfb8d7fc4}</Project>
+      <Project>{35578677-77ED-4989-80FE-EDF2D3192D3B}</Project>
       <Name>BLL.Interface</Name>
     </ProjectReference>
     <ProjectReference Include="..\DAL.Interface\DAL.Interface.csproj">
-      <Project>{bacd21a4-ab02-4c96-a2cf-6708731b2cb8}</Project>
+      <Project>{CC2B2706-8F8B-4D1E-99E6-A7FF3C2F439C}</Project>
       <Name>DAL.Interface</Name>
     </ProjectReference>
   </ItemGroup>

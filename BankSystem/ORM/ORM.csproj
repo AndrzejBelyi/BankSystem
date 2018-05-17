@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DB4AA099-5AA9-436B-B0B9-EC108ED5D00C}</ProjectGuid>
+    <ProjectGuid>{16730792-94E9-4CFA-84DE-E3545778E7F3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DAL</RootNamespace>
-    <AssemblyName>DAL</AssemblyName>
+    <RootNamespace>ORM</RootNamespace>
+    <AssemblyName>ORM</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,6 +39,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,24 +49,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EFImplementation\AccountRepository.cs" />
-    <Compile Include="EFImplementation\PersonRepository.cs" />
-    <Compile Include="EFImplementation\UnitOfWork.cs" />
+    <Compile Include="Account.cs">
+      <DependentUpon>BankSystemModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BankSystemModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BankSystemModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BankSystemModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BankSystemModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BankSystemModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BankSystemModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Person.cs">
+      <DependentUpon>BankSystemModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DAL.Interface\DAL.Interface.csproj">
-      <Project>{cc2b2706-8f8b-4d1e-99e6-a7ff3c2f439c}</Project>
-      <Name>DAL.Interface</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ORM\ORM.csproj">
-      <Project>{16730792-94E9-4CFA-84DE-E3545778E7F3}</Project>
-      <Name>ORM</Name>
-    </ProjectReference>
+    <EntityDeploy Include="BankSystemModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BankSystemModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="BankSystemModel.edmx.diagram">
+      <DependentUpon>BankSystemModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
+    <Content Include="BankSystemModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BankSystemModel.edmx</DependentUpon>
+      <LastGenOutput>BankSystemModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="BankSystemModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BankSystemModel.edmx</DependentUpon>
+      <LastGenOutput>BankSystemModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

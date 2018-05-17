@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F4D7F33F-CCED-49A5-8F19-001DFB8D7FC4}</ProjectGuid>
+    <ProjectGuid>{35578677-77ED-4989-80FE-EDF2D3192D3B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BLL.Interface</RootNamespace>
@@ -40,14 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Accounts\Account.cs" />
-    <Compile Include="Entities\Accounts\BaseAccount.cs" />
-    <Compile Include="Entities\Accounts\GoldAccount.cs" />
-    <Compile Include="Entities\Accounts\PlatinumAccount.cs" />
+    <Compile Include="Entities\Account.cs" />
     <Compile Include="Entities\AccountType.cs" />
+    <Compile Include="Entities\BaseAccount.cs" />
+    <Compile Include="Entities\GoldAccount.cs" />
     <Compile Include="Entities\Person.cs" />
+    <Compile Include="Entities\PlatinumAccount.cs" />
     <Compile Include="Interfaces\IBankSystemService.cs" />
-    <Compile Include="Interfaces\IGenerateId.cs" />
+    <Compile Include="Interfaces\IGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

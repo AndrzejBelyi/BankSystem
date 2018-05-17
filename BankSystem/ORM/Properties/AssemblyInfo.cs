@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("BLL.Interface")]
+[assembly: AssemblyTitle("ORM")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("BLL.Interface")]
+[assembly: AssemblyProduct("ORM")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("35578677-77ed-4989-80fe-edf2d3192d3b")]
+[assembly: Guid("16730792-94e9-4cfa-84de-e3545778e7f3")]
 
 // Version information for an assembly consists of the following four values:
 //

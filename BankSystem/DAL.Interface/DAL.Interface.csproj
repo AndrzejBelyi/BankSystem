@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BACD21A4-AB02-4C96-A2CF-6708731B2CB8}</ProjectGuid>
+    <ProjectGuid>{CC2B2706-8F8B-4D1E-99E6-A7FF3C2F439C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DAL.Interface</RootNamespace>
@@ -40,9 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DTO\AccountDTO.cs" />
-    <Compile Include="DTO\PersonDTO.cs" />
+    <Compile Include="DTO\DTOAccount.cs" />
+    <Compile Include="DTO\DTOPerson.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="Interfaces\IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
