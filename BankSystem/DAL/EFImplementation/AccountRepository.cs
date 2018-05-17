@@ -24,13 +24,16 @@ namespace DAL.EFImplementation
 
             Account temp = new Account()
             {
-                AccountType = entity.GetType().ToString(),
                 Account_number = entity.Number,
+                AccountType = entity.AccountType.ToString(),             
                 Amount = entity.Amount,
                 Id = entity.Id,
                 IsClosed = entity.IsClosed,
-                PersonId = entity.PersonId,
+                Person = entity.Person,
+
             };
+
+
         }
 
         public IEnumerable<DTOAccount> GetAll()

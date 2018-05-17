@@ -9,13 +9,22 @@ namespace BLL.Interface.Entities
 {
     public sealed class GoldAccount : Account
     {     
-        public GoldAccount(Person owner, IGenerator generator, bool isClosed = false) : base(owner, generator, isClosed)
+        public GoldAccount(Person owner, IGenerator generator) : base(owner, generator)
+        {
+        }
+
+        public GoldAccount(Person owner, string number, decimal sum, bool isClosed) : base(owner, number, sum, isClosed)
         {
         }
 
         protected override void AddBonuses()
         {
             throw new NotImplementedException();
+        }
+
+        public override AccountType GetTypeOfAccount()
+        {
+            return AccountType.Gold;
         }
 
         protected override void WithdrawBonuses()

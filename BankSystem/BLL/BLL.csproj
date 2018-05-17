@@ -43,6 +43,8 @@
     <Compile Include="AccountFactory.cs" />
     <Compile Include="BankSystemService.cs" />
     <Compile Include="GeneratorID.cs" />
+    <Compile Include="Mappers\AccountMapper.cs" />
+    <Compile Include="Mappers\PersonMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

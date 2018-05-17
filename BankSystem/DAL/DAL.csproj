@@ -50,9 +50,15 @@
     <Compile Include="EFImplementation\AccountRepository.cs" />
     <Compile Include="EFImplementation\PersonRepository.cs" />
     <Compile Include="EFImplementation\UnitOfWork.cs" />
+    <Compile Include="Mappers\AccountMapper.cs" />
+    <Compile Include="Mappers\PersonMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BLL.Interface\BLL.Interface.csproj">
+      <Project>{35578677-77ED-4989-80FE-EDF2D3192D3B}</Project>
+      <Name>BLL.Interface</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DAL.Interface\DAL.Interface.csproj">
       <Project>{cc2b2706-8f8b-4d1e-99e6-a7ff3c2f439c}</Project>
       <Name>DAL.Interface</Name>

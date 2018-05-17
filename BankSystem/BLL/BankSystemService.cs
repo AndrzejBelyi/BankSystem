@@ -11,16 +11,19 @@ namespace BLL
 {
     public class BankSystemService : IBankSystemService
     {
-        private IRepository<A> repository;
+        private readonly IUnitOfWork context;
+        private readonly IRepository<DAL.Interface.DTO.DTOAccount> accountRepository;
+        private readonly IRepository<DAL.Interface.DTO.DTOPerson> personRepository;
+        private readonly IGenerator generator;
 
-        public BankSystemService(IRepository<Account> repository)
+        public BankSystemService(IRepository<Account> accountRepository,IGenerator generator)
         {
-            this.repository = repository;
+            this.accountRepository = accountRepository;
         }
 
         public void CreateAccount(AccountType type, Person person, IGenerator generator)
         {
-            repository.Add(AccountFactory.Create(type, person, generator));
+            accountRepository.Add(AccountFactory.Create(type, person, generator));
         }
 
         public void Add(Account account, decimal sum)

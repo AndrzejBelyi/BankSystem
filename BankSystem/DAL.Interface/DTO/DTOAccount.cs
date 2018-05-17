@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL.Interface.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,12 +13,12 @@ namespace DAL.Interface.DTO
 
         public string Number { get; set; }
 
-        public DTOPerson Owner { get; set; }
+        public AccountType AccountType { get; set; }
 
         public decimal Amount { get; set;}
 
         public bool IsClosed { get; set; }
 
-        public int PersonId { get; set; }
+        public DTOPerson Person { get; set; }
     }
 }

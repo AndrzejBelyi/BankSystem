@@ -46,6 +46,11 @@
     <Compile Include="Interfaces\IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\BLL.Interface\BLL.Interface.csproj">
+      <Project>{35578677-77ED-4989-80FE-EDF2D3192D3B}</Project>
+      <Name>BLL.Interface</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

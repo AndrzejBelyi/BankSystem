@@ -15,5 +15,7 @@ namespace DAL.Interface.DTO
         public string LastName { get; set; }
 
         public string Email { get; set; }
+
+        public ICollection<DTOAccount> Accounts { get; set;}
     }
 }

@@ -11,14 +11,21 @@ namespace BLL.Interface.Entities
     {
         private decimal sum;
 
-        public Account(Person owner, IGenerator generator, bool isClosed = false)
+        public Account(Person owner, IGenerator generator)
         {
-            this.Id = generator.GenerateID();
-            this.IsClosed = isClosed;
             this.Owner = owner;
+            this.Number = generator.GenerateID();
         }
 
-        public string Id { get; }
+        public Account(Person owner, string number,decimal sum, bool isClosed)
+        {
+            this.Owner = owner;
+            this.Number = number;
+            this.Sum = sum;
+            this.IsClosed = isClosed;
+        }
+
+        public string Number { get; }
 
         public Person Owner { get; }
 
@@ -81,5 +88,6 @@ namespace BLL.Interface.Entities
 
         protected abstract void AddBonuses();
 
+        public abstract AccountType GetTypeOfAccount();
     }
 }
